@@ -5,8 +5,10 @@ name: Full tests
 
 on:
   workflow_dispatch:
-  release:
-    types: ["prereleased"]
+  push:
+    branches: ["main", "relase/*"]
+  pull_request:
+    branches: ["main"]
 
 jobs:
   build:
